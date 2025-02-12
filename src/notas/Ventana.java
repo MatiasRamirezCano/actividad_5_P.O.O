@@ -111,13 +111,13 @@ public class Ventana extends JFrame implements ActionListener {
             notas.lista_notas[3] = Double.parseDouble(campo_nota4.getText());
             notas.lista_notas[4] = Double.parseDouble(campo_nota5.getText());
             double prom = notas.calcular_promedio();
-            promedio.setText("Promedio = " + String.valueOf(prom));
+            promedio.setText("Promedio = " + String.format("%.2f", prom));
             double desv = notas.calcular_desviacion();
-            desviacion.setText("Desviacion = " + String.valueOf(desv));
+            desviacion.setText("Desviacion = " + String.format("%.2f", desv));
             double may = notas.calcular_mayor();
-            mayor.setText("Mayor nota = " + String.valueOf(may));
+            mayor.setText("Mayor nota = " + String.format("%.2f", may));
             double men = notas.calcular_menor();
-            menor.setText("Menor nota = " + String.valueOf(men)); 
+            menor.setText("Menor nota = " + String.format("%.2f", men)); 
         }
         if(evento.getSource() == limpiar){
             campo_nota1.setText("");
